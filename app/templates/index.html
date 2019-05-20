@@ -13,10 +13,31 @@
 
 
 {% block content %}
-<h1>Politics</h1>
-<hr>
+
+{% for item in articles%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">{{item.description}}</p>
+                    <a href="{{item.url}}" class="btn btn-primary">read more from {{item.name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+ <h1>Politics</h1>
+ <hr>
 {% for item in sources %}
 <div class="container">
+   
+    
     <div class="row">
         <div class="col-xs-4">
             <div class="card" style="width: 18rem;">
@@ -29,19 +50,6 @@
         </div>
     </div>
     <br>
-    <h1>Education</h1>
-    <hr>
-    <div class="row">
-        <div class="col-xs-4">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <p class="card-text">{{item.description}}</p>
-                    <a href="{{item.url}}" class="btn btn-primary">read more from {{item.name}}</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endfor %}
+    {% endfor %}
+
 {% endblock %}

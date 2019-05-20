@@ -30,6 +30,7 @@ def process_sources(sources_list):
     results = []
     for item in sources_list:
         id = item.get('id')
+        image = item.get('image')
         name = item.get('name')
         language = item.get('language')
         country = item.get('country')
