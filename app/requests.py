@@ -10,7 +10,7 @@ source_url = None
 def configure_request(app):
     global api_key, search_url, news_url, articles_url,source_url
     api_key = app.config['API_KEY']
-    news_url = app.config['ARTICLE_BASE_URL']
+    news_url = app.config['ARTICLES_BASE_URL']
     source_url = app.config['SOURCES_BASE_URL']
     search_url = app.config['SEARCH_ARTICLE_BASE_URL']
 
