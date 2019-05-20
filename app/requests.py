@@ -37,7 +37,7 @@ def process_sources(sources_list):
         description = item.get('description')
 
         if item.get('id') and item.get('language')=='en':
-            source_object = Movie(id,name,language,country,url,description)
+            source_object = Sources(id,name,language,country,url,description)
             results.append(source_object)
 
     return results
