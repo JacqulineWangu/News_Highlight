@@ -41,3 +41,16 @@ def process_sources(sources_list):
             results.append(source_object)
 
     return results
+
+def process_articles(articles_list):
+    '''
+    '''
+    results = []
+    for item in articles_list:
+        id = item.get('id')
+        title = item.get('title')
+        content = item.get('content')
+        image = item.get('image')
+        url = item.get('url')
+        urlToimage = item.get('urlToimage')
+        source = item.get('source')
