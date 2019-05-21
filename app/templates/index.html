@@ -1,8 +1,8 @@
-{% extends 'base.html'%}
-{% import 'macros.html' as macro%}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
 
-{%block styles%}
+{% block styles %}
 
 {{ super() }}
 
@@ -13,43 +13,19 @@
 
 
 {% block content %}
-
-{% for item in articles%}
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
+    <div class="container">
+        <div class="row">
+        {% for item in sources %}
+            <div class="card" style="width: 18rem; margin:10px;">
                 <div class="card-body">
                     <h5 class="card-title">{{item.name}}</h5>
                     <p class="card-text">{{item.description}}</p>
-                    <a href="{{item.url}}" class="btn btn-primary">read more from {{item.name}}</a>
+                    <a href="/sources/{{item.id}}" class="btn btn-primary">read more from {{item.name}}</a>
                 </div>
             </div>
+            <br>
+        {% endfor %}
         </div>
     </div>
-</div>
-
-{% endfor %}
-
- <h1>Politics</h1>
- <hr>
-{% for item in sources %}
-<div class="container">
-   
-    
-    <div class="row">
-        <div class="col-xs-4">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <p class="card-text">{{item.description}}</p>
-                    <a href="{{item.url}}" class="btn btn-primary">read more from {{item.name}}</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    {% endfor %}
 
 {% endblock %}
