@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for item in article_data %}
+        <div class="card" style="width: 18rem; margin:10px;">
+            <img src="{{ item.urlToImage }}" alt="{{item.title | truncate(15)}}" class="card-img-top">
+            <div class="card-body">
+                <h5 style="font-size: 16px; text-align: justify;" class="card-title">{{item.title}}</h5>
+                <hr>
+                <p style="font-size: 12px; text-align: justify;" class="card-text">{{item.content}}</p>
+            </div>
+            <a href="{{item.url}}" style="width: 100%" class="btn btn-primary">read more from {{item.title | truncate(10)}}</a>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
