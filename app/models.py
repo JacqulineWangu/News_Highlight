@@ -1,11 +1,9 @@
 class Articles:
     '''
     '''
-    def __init__(self, id, title, content, image, url, urlToImage, source):
-        self.id = id
+    def __init__(self, title, content, url, urlToImage, source):
         self.title = title
         self.content = content
-        self.image = image
         self.url = url
         self.urlToImage = urlToImage
         self.source = source
