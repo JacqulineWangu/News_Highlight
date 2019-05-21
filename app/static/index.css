@@ -1,0 +1,9 @@
+.card {
+    border-block-end-style: solid;
+    border-block-end-color: olive orange darkgreen greenyellow!important;
+}
+
+.button:hover {
+    color: aqua;
+    size: 20%;
+}
