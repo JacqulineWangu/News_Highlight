@@ -1,9 +1,13 @@
-.card {
+#card {
     border-block-end-style: solid!important;
     border-block-end-color: olive!important;
 }
 
-.button:hover {
+#button:hover {
     color: aqua!important;
     size: 20%!important;
+}
+
+#bodyc {
+    background-color: burlywood!important;
 }
