@@ -2,13 +2,14 @@
 {% import 'macros.html' as macro%}
 
 {% block content %}
+
 <div class="container">
     <div class="row">
         {% for item in article_data %}
         <div class="card" style="width: 18rem; margin: 20px;">
             <img src="{{ item.urlToImage }}" alt="{{item.title | truncate(15)}}" class="card-img-top">
             <div class="card-body">
-                <h5 style="font-size: 16px; text-align: justify;" class="card-title">{{item.title}}</h5>
+                <h5 style="font-size: 16px; text-align: center;" class="card-title">{{item.title}}</h5>
                 <hr>
                 <p style="font-size: 12px; text-align: justify;" class="card-text">{{item.content}}</p>
             </div>
@@ -19,5 +20,4 @@
         {% endfor %}
     </div>
 </div>
-
 {% endblock %}
