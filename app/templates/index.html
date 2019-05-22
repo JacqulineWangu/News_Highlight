@@ -16,14 +16,15 @@
 
 
 {% block content %}
-    <div class="container" id="body">
+    <div class="container" style="background-color: wheat">
         <div class="row">
         {% for item in sources %}
-            <div class="card" id="bodyc" style="width: 45rem; margin: 30px; height: 30rem;">
+            <div class="card" style="width: 45rem; margin: 30px; height: 30rem; background-color: lightgrey;">
                 <div class="card-body">
-                    <h5 class="card-title"style="font-size: 23px;">{{item.name}}</h5>
+                    <h5 class="card-title" style="font-size: 23px;">{{item.name}}
+                    </h5>
                     <p class="card-text" style="font-size: 20px;">{{item.description}}</p>
-                    <a href="/sources/{{item.id}}" class="btn btn-primary">read more from {{item.name}}</a>
+                    <a href="/sources/{{item.id}}" class="btn btn-primary">Read more from {{item.name}}</a>
                 </div>
             </div>
             <br>
