@@ -1,9 +1,9 @@
 .card {
-    border-block-end-style: solid;
-    border-block-end-color: olive orange darkgreen greenyellow!important;
+    border-block-end-style: solid!important;
+    border-block-end-color: olive!important;
 }
 
 .button:hover {
-    color: aqua;
-    size: 20%;
+    color: aqua!important;
+    size: 20%!important;
 }
